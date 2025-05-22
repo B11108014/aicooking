@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 美食料理師</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <h1>🥕 AI 美食料理師</h1>
+  <p style="text-align: center;">輸入冰箱剩下的食材，看看你能做出什麼料理吧！
+  <p style="text-align: center;">不知道要煮什麼，那就來一起挑戰看看吧！</p>
+
+  <!-- 🔍 輸入區 -->
+  <div class="main-wrapper">
+    <button onclick="randomPick()" class="challenge-btn">🎲 隨機挑戰：今天吃什麼？</button>
+
+    <div id="random-ingredients" style="display: none;">
+      <h3>🎯 你的隨機食材：</h3>
+      <p id="random-result"></p>
+      <button onclick="generateWithRandom()" class="secondary-btn">👨‍🍳 你會怎麼做這道菜？</button>
+    </div>
+
+    <!-- ❌ 已移除 <hr> -->
+
+    <p>請輸入你冰箱裡的食材（用逗號分隔）：</p>
+    <input type="text" id="ingredient-input" placeholder="例如：番茄,蛋,牛奶" />
+    <br><br>
+    <button onclick="generateRecipe()">🔍 查看料理建議</button>
+
+    <!-- 🧾 建議食材 -->
+    <div id="suggested-ingredients">
+      <p>🧾 可嘗試輸入的食材有：</p>
+      <p>番茄、蛋、牛奶、玉米、吐司、起司、馬鈴薯、胡蘿蔔...</p>
+    </div>
+
+    <!-- 🍽 食譜結果 -->
+    <div id="result-area" style="margin-top: 30px;"></div>
+  </div>
+
+  <!-- 📌 使用建議區 -->
+  <div class="info-row">
+    <div class="info-card">
+      <h3>📌 適合使用這個網站的時候</h3>
+      <ul>
+        <li>冰箱剩一些食材卻不知道怎麼搭配？</li>
+        <li>想快速煮晚餐又不想花時間查食譜？</li>
+        <li>想減少食物浪費，清冰箱很重要！</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>🥦 這些料理的營養你知道嗎？</h3>
+      <ul>
+        <li>番茄含有茄紅素，有助於抗氧化</li>
+        <li>蛋白質是修復組織的重要營養素</li>
+        <li>玉米富含膳食纖維，有助腸道健康</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
